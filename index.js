@@ -34,8 +34,6 @@ function onCategoryChanged() {
 }
 
 
-
-
 d3.csv(dataPath.CLT).then(function(data){
     newData = data.map(function(d){
         return { ...d, date: d3.timeParse("%Y-%m-%d")(d.date) }
@@ -70,7 +68,7 @@ function updateChart(key){
                 .y(function(d) { return y(d[key]) })
             )
     // add title to the graph
-    
+
 }
 
 
